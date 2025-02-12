@@ -19,4 +19,3 @@ class Link(
 
     var isActive: Boolean = isActive
 }
-}
