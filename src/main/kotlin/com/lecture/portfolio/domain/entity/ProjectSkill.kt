@@ -3,7 +3,7 @@ package com.lecture.portfolio.domain.entity
 import jakarta.persistence.*
 
 @Entity
-class ProjectSkill(proejct: Project, skill: Skill) : BaseEntity() {
+class ProjectSkill(project: Project, skill: Skill) : BaseEntity() {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "project_skill_id")
@@ -11,7 +11,7 @@ class ProjectSkill(proejct: Project, skill: Skill) : BaseEntity() {
 
     @ManyToOne(targetEntity = Project::class, fetch = FetchType.LAZY)
     @JoinColumn(name = "project_id", nullable = false)
-    var proejct: Project = proejct
+    var project: Project = project
 
     @ManyToOne(targetEntity = Skill::class, fetch = FetchType.LAZY)
     @JoinColumn(name = "skill_id", nullable = false)
