@@ -5,8 +5,9 @@ import com.lecture.portfolio.presentation.dto.LinkDTO
 import com.lecture.portfolio.presentation.dto.ProjectDTO
 import com.lecture.portfolio.presentation.dto.ResumeDTO
 import com.lecture.portfolio.presentation.repository.PresentationRepository
-import jakarta.transaction.Transactional
+
 import org.springframework.stereotype.Service
+import org.springframework.transaction.annotation.Transactional
 
 @Service
 class PresentationService (
