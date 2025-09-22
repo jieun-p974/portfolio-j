@@ -9,6 +9,12 @@ abstract class AdminException (
     val httpStatus: HttpStatus = httpStatus
 }
 
-class AdminBadRequestException(message: String) : AdminException(HttpStatus.BAD_REQUEST, message)
+class AdminBadReqeustException(message: String) : AdminException(
+    httpStatus = HttpStatus.BAD_REQUEST,
+    message = message
+)
 
-class AdminInternalServerErrorExeption(message: String) : AdminException(HttpStatus.INTERNAL_SERVER_ERROR, message)
+class AdminInternalServerErrorException(message: String) : AdminException(
+    httpStatus = HttpStatus.INTERNAL_SERVER_ERROR,
+    message = message
+)
